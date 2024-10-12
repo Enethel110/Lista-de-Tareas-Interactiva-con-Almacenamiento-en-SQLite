@@ -1,0 +1,17 @@
+{
+  "name": "lista-de-tareas-interactiva",
+  "version": "1.0.0",
+  "description": "Aplicación web simple que permite a los usuarios agregar, visualizar y eliminar tareas de una lista utilizando HTML, CSS y JavaScript con el fin del comprender los fundamentos de la manipulación del DOM, manejo de eventos y almacenamiento de datos en el navegador.\r Deployed link on GitHub: https://enethel110.github.io/Lista-de-Tareas-Interactiva/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "sqlite3": "^5.1.7"
+  }
+}

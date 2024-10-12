@@ -1,0 +1,311 @@
+/* Fuente general */
+body {
+    font-family: 'Quicksand', sans-serif; /* Fuente general de la página */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    background-color: #f4f4f9; /* Color de fondo claro */
+    color: #000000; /* Color de texto principal */
+}
+
+/* Estilo para los títulos */
+h1 {
+    font-family: 'Merriweather', serif; /* Fuente para los títulos */
+    font-weight: 700; /* Peso en negrita */
+    color: #333; /* Color oscuro para los títulos */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    text-align: center; /* Centrado del título */
+}
+
+/* Estilo para el contenedor del formulario */
+.form-container {
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Margen superior e inferior, centrado horizontal */
+    padding: 20px; /* Relleno interno del contenedor */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor del contenedor */
+}
+
+/* Formulario */
+form {
+    display: flex; /* Flexbox para alinear los elementos en columna */
+    flex-direction: column; /* Dirección en columna */
+}
+
+/* Campos del formulario (input, textarea, select) */
+input,
+textarea,
+select {
+    padding: 10px; /* Relleno interno */
+    margin-bottom: 15px; /* Espacio debajo de los campos */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* El área de texto (textarea) */
+textarea {
+    resize: none; /* Evita el redimensionamiento */
+}
+
+/* Botones del formulario */
+.form-buttons {
+    display: flex; /* Flexbox para los botones */
+    justify-content: center; /* Centrado de los botones */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+/* Estilo común para todos los botones */
+button {
+    padding: 12px 24px; /* Tamaño del botón */
+    font-size: 16px; /* Tamaño de la fuente */
+    border: none; /* Sin borde */
+    border-radius: 6px; /* Bordes redondeados */
+    color: #fff; /* Texto blanco */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    outline: none; /* Elimina el borde del enfoque */
+    margin: 8px 5px; /* Margen entre los botones */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Efecto hover: cambiar color y agrandar ligeramente */
+button:hover {
+    transform: scale(1.05); /* Aumenta el tamaño un poco */
+}
+
+/* Efecto al hacer clic (active): sombra interna y reducir tamaño */
+button:active {
+    transform: scale(1); /* Vuelve al tamaño original */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
+
+/* Efecto de foco (cuando el botón está seleccionado) */
+button:focus {
+    outline: none; /* Elimina el contorno del botón */
+    box-shadow: 0px 0px 5px rgba(52, 152, 219, 0.7); /* Resalta con un borde azul */
+}
+
+/* Botón de tipo "submit" */
+button[type="submit"] {
+    background-color: #1abc9c; /* Verde */
+}
+
+button[type="submit"]:hover {
+    background-color: #16a085; /* Verde oscuro en hover */
+}
+
+/* Botón con id "cargarTareas" */
+button#cargarTareas {
+    background-color: #3498db; /* Azul */
+}
+
+button#cargarTareas:hover {
+    background-color: #2980b9; /* Azul oscuro en hover */
+}
+
+/* Botón de tipo "reset" */
+button[type="reset"] {
+    background-color: #e74c3c; /* Rojo */
+}
+
+button[type="reset"]:hover {
+    background-color: #c0392b; /* Rojo oscuro en hover */
+}
+
+/* Estilo para la lista de tareas */
+#tasks-list {
+    max-width: 600px; /* Ancho máximo de la lista */
+    margin: 20px auto; /* Margen superior e inferior, centrado horizontal */
+    padding: 0; /* Sin relleno */
+    list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+/* Elementos de la lista */
+#tasks-list li {
+    padding: 10px; /* Relleno interno */
+    margin-bottom: 10px; /* Espacio entre las tareas */
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex; /* Flexbox para el contenido de la tarea */
+    flex-direction: column; /* Dirección en columna */
+}
+
+/* Estilo para la parte superior de la tarea (Nombre, Fecha, Prioridad y Botones) */
+.task-header {
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
+    margin-bottom: 10px; /* Espacio debajo */
+}
+
+.task-name {
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+.task-header .task-meta {
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    color: #666; /* Color gris para metadatos */
+    margin-right: 15px; /* Espacio a la derecha */
+    text-align: right; /* Alinea el texto a la derecha */
+}
+
+.task-header .buttons {
+    display: flex; /* Flexbox para los botones de la tarea */
+    gap: 10px; /* Espacio entre los botones */
+    align-items: center; /* Alinea verticalmente los botones */
+}
+
+/* Estilo para los botones dentro de la tarea (Eliminar y Completar) */
+.delete-button,
+.complete-button {
+    padding: 8px 16px; /* Tamaño del botón */
+    font-size: 14px; /* Tamaño de la fuente */
+    border: none; /* Sin borde */
+    border-radius: 6px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* El botón de eliminar */
+.delete-button {
+    background-color: #e74c3c; /* Rojo */
+    color: white; /* Texto blanco */
+}
+
+.delete-button:hover {
+    background-color: #c0392b; /* Rojo oscuro en hover */
+    transform: scale(1.05); /* Agranda ligeramente el botón */
+}
+
+.delete-button:active {
+    background-color: #a93226; /* Rojo más oscuro al hacer clic */
+    transform: scale(1); /* Vuelve al tamaño original */
+}
+
+/* El botón de completar */
+.complete-button {
+    background-color: #1abc9c; /* Verde */
+    color: white; /* Texto blanco */
+}
+
+.complete-button:hover {
+    background-color: #16a085; /* Verde oscuro en hover */
+    transform: scale(1.05); /* Agranda ligeramente el botón */
+}
+
+.complete-button:active {
+    background-color: #1e7f6b; /* Verde más oscuro al hacer clic */
+    transform: scale(1); /* Vuelve al tamaño original */
+}
+
+/* Estilo para la descripción de la tarea */
+.task-description {
+    font-size: 0.95em; /* Tamaño de fuente más pequeño */
+    color: #333; /* Color de texto */
+    white-space: pre-wrap; /* Mantiene los saltos de línea y espacios */
+    margin-top: 10px; /* Espacio encima */
+    word-wrap: break-word; /* Permite el ajuste de texto largo */
+}
+
+/* Estilo para la fecha y prioridad dentro de la tarea */
+.task-meta span {
+    margin-left: 10px; /* Espacio a la izquierda */
+    font-weight: bold; /* Texto en negrita */
+    color: #888; /* Color gris claro */
+}
+
+/* Estilo para el mensaje si no hay tareas */
+#empty {
+    text-align: center; /* Centrado del mensaje */
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    color: #888; /* Color gris claro */
+    margin: 20px auto; /* Margen superior e inferior */
+}
+
+/* Estilos para el modal (ventana emergente) */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Posición fija en pantalla */
+    z-index: 1; /* Asegura que el modal se muestre por encima */
+    left: 0; /* Alineación izquierda */
+    top: 0; /* Alineación superior */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Permite el desplazamiento */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.modal-content {
+    background-color: white; /* Fondo blanco */
+    margin: 15% auto; /* Centrado vertical */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #888; /* Borde gris */
+    width: 80%; /* Ancho del modal */
+    max-width: 300px; /* Ancho máximo */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo para el botón de cierre del modal */
+.close {
+    color: #aaa; /* Color gris */
+    float: right; /* Alineación a la derecha */
+    font-size: 28px; /* Tamaño grande */
+    font-weight: bold; /* Negrita */
+}
+
+/* Efecto al pasar el ratón sobre el botón de cierre */
+.close:hover,
+.close:focus {
+    color: black; /* Cambio a negro */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilo para la lista de tareas, cuando está vacía */
+#tasks-list.empty {
+    display: none; /* Oculta la lista si está vacía */
+}
+
+/* Estilos para las tareas completadas */
+.completed {
+    background-color: #e0e0e0; /* Fondo gris claro */
+    color: #888; /* Texto gris oscuro */
+    text-decoration: line-through; /* Tachar el texto */
+}
+
+/* Deshabilitar botones dentro de la tarea completada */
+.completed .complete-button,
+.completed .delete-button {
+    background-color: #dcdcdc; /* Botones en gris */
+    cursor: not-allowed; /* No permite interacción */
+}
+
+.completed .complete-button:hover,
+.completed .delete-button:hover {
+    background-color: #dcdcdc; /* Sin cambio al pasar el ratón */
+}
+
+.completed .complete-button:active,
+.completed .delete-button:active {
+    transform: none; /* Sin efecto al hacer clic */
+}
+
+/* Estilos para la lista <ul> */
+ul {
+    background-color: #701313; /* Fondo naranja */
+    color: rgb(0, 0, 0); /* Texto en negro */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+/* Cambiar el color del texto dentro de los <li> */
+ul li {
+    padding: 5px 0; /* Espaciado entre los elementos */
+}
